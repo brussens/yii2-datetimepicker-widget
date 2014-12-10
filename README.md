@@ -16,17 +16,18 @@ to the require section of your `composer.json` file.
 
 ##Options
 
-* **selector** - HTML selector for widget
 * **format** - datetime format
 * **clientOptions** - options of plugin. See http://eonasdan.github.io/bootstrap-datetimepicker/#options
 
 ##Base usage:
 ```php
-echo $form->field($model, 'attribute')->widget(brussens\datetimepicker\Widget::className());
+use brussens\datetimepicker\Widget as DateTimePicker;
+echo $form->field($model, 'attribute')->widget(DateTimePicker::className());
 ```
 ##Advanced usage
 ```php
-echo $form->field($model, 'attribute')->widget(brussens\datetimepicker\Widget::className(), [
+use brussens\datetimepicker\Widget as DateTimePicker;
+echo $form->field($model, 'attribute')->widget(DateTimePicker::className(), [
         'format'=>'DD-MM-YYYY HH:mm:ss',
         'clientOptions'=>[
             'language'=>'ru',
@@ -39,7 +40,7 @@ echo $form->field($model, 'attribute')->widget(brussens\datetimepicker\Widget::c
             'useSeconds'=>true,
             'useCurrent'=>true,
             'sideBySide'=>true
-        ]
+        ],
     ]);
 ```
 ##Profit

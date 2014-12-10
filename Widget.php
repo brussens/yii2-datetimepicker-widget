@@ -40,20 +40,11 @@ class Widget extends \yii\widgets\InputWidget
     public $format = null;
 
     /**
-     * Selector identifier
-     * @var
-     */
-    public $selector;
-
-    /**
      * @throws \yii\base\InvalidConfigException
      */
     public function init()
     {
         parent::init();
-
-        if (!$this->selector)
-            $this->selector = '#' . $this->options['id'];
     }
 
     /**
@@ -81,7 +72,7 @@ class Widget extends \yii\widgets\InputWidget
     {
 
         $view = $this->getView();
-        $selector = Json::encode($this->selector);
+        $selector = Json::encode('#' . $this->options['id']);
         $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : '';
 
         Asset::register($view);
