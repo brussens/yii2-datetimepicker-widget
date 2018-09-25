@@ -3,10 +3,10 @@
     "description": "Bootstrap 3 DateTimePicker widget for Yii2.",
     "keywords": ["yii", "extension", "widget", "datepicker", "timepicker", "datetimepicker"],
     "type": "yii2-extension",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Brusenskiy Dmitry",
+            "name": "Brusensky Dmitry",
             "email": "brussens@nativeweb.ru"
         }
     ],
@@ -15,12 +15,13 @@
         "source": "https://github.com/brussens/yii2-datetimepicker-widget"
     },
     "require": {
-        "yiisoft/yii2": "*",
-        "eonasdan/bootstrap-datetimepicker": "*"
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "^2.0.0",
+        "bower-asset/eonasdan-bootstrap-datetimepicker": "^4.17.47"
     },
     "autoload": {
         "psr-4": {
-            "brussens\\datetimepicker\\": ""
+            "brussens\\datetimepicker\\": "src/"
         }
     }
 }
